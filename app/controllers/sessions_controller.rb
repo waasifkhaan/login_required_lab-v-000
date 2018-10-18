@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
+    before_action :require_logged_in
 
-  def current_user
-    @current_user ||= User.find(params[sessions[:id]])
-  end
+def create 
+end 
 end
