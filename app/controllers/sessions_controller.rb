@@ -14,6 +14,3 @@ class SessionsController < ApplicationController
     redirect_to controller: 'application', action: 'hello'
   end
 end
-
-
-end
