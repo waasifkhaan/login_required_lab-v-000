@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
     if session[:name]
       session[:name].clear
     redirect_to controller: 'application', action: 'hello'
-  end 
+  end
     end
 
 
