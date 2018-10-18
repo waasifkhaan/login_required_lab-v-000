@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root controller: :secrets, action: :index
+  get 'secrets/new'
+
+  root 'application#hello'
   resources :secrets
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
