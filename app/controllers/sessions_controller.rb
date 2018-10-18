@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         redirect_to login_path
       else
         user = User.create(name: session[:name])
-      end 
+      end
     end
 
 
