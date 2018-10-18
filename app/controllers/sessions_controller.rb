@@ -9,9 +9,8 @@ class SessionsController < ApplicationController
       return redirect_to(controller: 'sessions',
                       action: 'new') if !params[:name] || params[:name].empty?
    session[:name] = params[:name]
-   user = User.new(name: session[:name])
-   user.save
-   user.name
+   user = User.create(name: session[:name]).name
+
    redirect_to controller: 'application', action: 'hello'
     end
 
