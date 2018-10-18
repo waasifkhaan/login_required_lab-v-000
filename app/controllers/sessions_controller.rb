@@ -6,11 +6,10 @@ class SessionsController < ApplicationController
 
 
     def create
-      if session[:name].empty?
-        redirect_to login_path
-      else
-        user = User.create(name: session[:name])
-      end
+      return redirect_to(controller: 'sessions',
+                      action: 'new') if !params[:name] || params[:name].empty?
+   session[:name] = params[:name]
+   redirect_to controller: 'application', action: 'hello'
     end
 
 
