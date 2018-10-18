@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
     end
 
     def destroy
-    session[:name] = nil 
+    session[:name] = nil
     redirect_to controller: 'application', action: 'hello'
   end
 
