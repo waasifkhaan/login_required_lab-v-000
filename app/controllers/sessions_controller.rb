@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     
     def create
       if session[:name].empty?
-        redirect_to 
+        redirect_to login_path
       
     end
 
